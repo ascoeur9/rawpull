@@ -24,8 +24,11 @@ FILTER_ALL = "all"
 # 입력 구분자 패턴
 SEPARATORS_PATTERN = re.compile(r"[,\t;\n]+")
 
-# 썸네일
-THUMBNAIL_SIZE = (200, 200)
+# 썸네일 (리스트뷰용 가로형)
+THUMBNAIL_SIZE = (240, 160)
+
+# 폰트 (CJK 지원)
+FONT_FAMILY = "Yu Gothic UI"
 THUMBNAIL_EXTENSIONS = frozenset({".jpg", ".jpeg", ".webp", ".png", ".bmp", ".tiff", ".tif"})
 
 # 앱 설정

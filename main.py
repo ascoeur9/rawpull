@@ -1,5 +1,6 @@
 import threading
 import tkinter as tk
+import tkinter.font as tkfont
 
 import customtkinter as ctk
 
@@ -11,6 +12,7 @@ from constants import (
     FILTER_ALL,
     FILTER_JPG,
     FILTER_RAW,
+    FONT_FAMILY,
     MATCH_CONTAINS,
     MATCH_EXACT,
     MIN_HEIGHT,
@@ -34,6 +36,13 @@ class PhotoCopierApp(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.cfg = config.load_config()
+
+        # CJK 폰트 설정 (일본어/한국어/중국어 지원)
+        for fn in ("TkDefaultFont", "TkTextFont", "TkMenuFont", "TkFixedFont"):
+            try:
+                tkfont.nametofont(fn).configure(family=FONT_FAMILY)
+            except Exception:
+                pass
 
         self.title(APP_TITLE)
         self.minsize(MIN_WIDTH, MIN_HEIGHT)
@@ -316,7 +325,7 @@ class PhotoCopierApp(ctk.CTk):
 
         self.preview.set_results(result.matched_files, result.unmatched_terms)
 
-        total_files = len(self.preview.get_selected_files())
+        total_files = len(self.preview._items)
         unmatched = len(result.unmatched_terms)
         self._log(
             f"검색 완료: {len(terms)}개 검색어 → {total_files}개 파일 매칭, "
