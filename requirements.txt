@@ -1,0 +1,5 @@
+customtkinter>=5.2
+Pillow>=10.0
+rawpy>=0.20
+numpy
+pyinstaller>=6.0
