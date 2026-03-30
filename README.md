@@ -1,12 +1,15 @@
 # RawPull
 
-파일번호로 RAW/JPG 사진을 빠르게 검색하고 복사하는 Windows 데스크톱 앱
+파일번호로 RAW/JPG 사진을 빠르게 검색하고 복사하는 데스크톱 앱
 
 ## 다운로드
 
-> **[RawPull.exe 다운로드](https://github.com/ascoeur9/rawpull/releases/latest/download/RawPull.exe)**
+| 플랫폼 | 다운로드 |
+|--------|----------|
+| Windows | **[RawPull.exe](https://github.com/ascoeur9/rawpull/releases/latest/download/RawPull.exe)** |
+| macOS | **[RawPull-mac.zip](https://github.com/ascoeur9/rawpull/releases/latest/download/RawPull-mac.zip)** |
 
-설치 불필요 - 다운로드 후 바로 실행
+설치 불필요 - 다운로드 후 바로 실행 (macOS는 압축 해제 후 RawPull.app 실행)
 
 ## 주요 기능
 

@@ -27,8 +27,15 @@ SEPARATORS_PATTERN = re.compile(r"[,\t;\n]+")
 # 썸네일 (리스트뷰용 가로형)
 THUMBNAIL_SIZE = (240, 160)
 
-# 폰트 (CJK 지원)
-FONT_FAMILY = "Yu Gothic UI"
+# 폰트 (CJK 지원 - 플랫폼별 자동 선택)
+import sys as _sys
+
+if _sys.platform == "darwin":
+    FONT_FAMILY = "Apple SD Gothic Neo"
+elif _sys.platform == "win32":
+    FONT_FAMILY = "Yu Gothic UI"
+else:
+    FONT_FAMILY = "Noto Sans CJK KR"
 THUMBNAIL_EXTENSIONS = frozenset({".jpg", ".jpeg", ".webp", ".png", ".bmp", ".tiff", ".tif"})
 
 # 앱 설정
